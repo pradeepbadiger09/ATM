@@ -1,11 +1,14 @@
 import sys
-if len(sys.argv) != 4:
-    print("Usage: python atm.py <withdraw_amount> <balance> <PIN>")
-    sys.exit()
 
-withdraw = int(sys.argv[1])
-balance = int(sys.argv[2])
-pin = sys.argv[3]
+if len(sys.argv) == 4:
+    withdraw = int(sys.argv[1])
+    balance = int(sys.argv[2])
+    pin = sys.argv[3]
+else:
+    print("Arguments are default values.")
+    withdraw = 0
+    balance = 1000
+    pin = 0000
 
 correct_pin = "1234"
 
